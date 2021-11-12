@@ -4,6 +4,8 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -19,6 +21,7 @@ public class SelenideTest {
 
     @Test
     void testGitHub(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
         open("");
         $("[name=q]").setValue("eroshenkoam/allure-example").pressEnter();
 

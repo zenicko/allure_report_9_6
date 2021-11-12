@@ -29,6 +29,7 @@ repositories{
 dependencies{
     //Selenide
     testImplementation 'com.codeborne:selenide:5.25.0-selenium-4.0.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.13.2'
 
     //JUnit
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'

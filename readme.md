@@ -30,7 +30,17 @@ Step 3. Create directories of the projects in /src.
 
 Step 4. Create the test with "steps".
 
-Step 5. Create the test with "annotation"
+Step 5. Create the test with "annotation".
+
+Step 6. Take a screenshot of a page for an attachment of Allure (in the class with steps).
+
+Step 7. Take a screenshot of a page for an attachment of Allure (in the class with annotation).
+
+Step 8. Create a parameterization test.
+
+Step 9. Add labels in Allure.
+
+Step 10. Log events of tests in Allure .
 
 
 ## What's new
@@ -48,8 +58,44 @@ ___
 ### 3. Selenide
 ### 4. Git
 ### 5. Allure
-  1. allureReport generates a report in a project.
-  2. allureServe generates a report in html page.
+1. allureReport generates a report in a project.
+2. allureServe generates a report in html page.
+3. Parameterization tests
+   ```aidl
+   @DisplayName("CHECK")
+   @ParameterizedTest(name="{0} {displayName} ")
+   @ValueSource(strings = {"AAA", "BBB"})
+   void testParameterization(String city) {
+         Allure.parameter("City", city);
+    }
+   ```
+4. Log events and report to Allure
+
+   Dependencies:
+
+    `io.qameta.allure:allure-selenide:2.13.2`
+
+   Start:  
+
+   `SelenideLogger.addListener("allure", new AllureSelenide());`
+
+5. Screenshot
+   ```
+     AllureLifecycle lifeCycle = Allure.getLifecycle();
+     
+     lifeCycle.addAttachment("screenshot", 
+                "image/png", 
+                "png", 
+                takeScreenShot());
+                
+     private static byte[] takeScreenShot(){
+        WebDriver driver = WebDriverRunner.getWebDriver();
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+   ```
+
+
             
 ___
 ### -2. require "Resources"
