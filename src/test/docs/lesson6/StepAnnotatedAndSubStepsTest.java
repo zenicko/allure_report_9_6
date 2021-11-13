@@ -1,4 +1,4 @@
-package ru.zenicko.lesson6;
+package docs.lesson6;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;

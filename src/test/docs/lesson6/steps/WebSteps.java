@@ -1,4 +1,4 @@
-package ru.zenicko.lesson6.steps;
+package docs.lesson6.steps;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;

@@ -22,6 +22,8 @@ ___
 
 ## Steps
 ___
+### Lesson 6. Theory.
+___
 Step 1. Create the three files: readme.md, build.gradle and .gitignore.
 
 Step 2. Fill the file build.gradle the main features: plugins, repositories, dependencies, test.
@@ -40,7 +42,14 @@ Step 8. Create a parameterization test.
 
 Step 9. Add labels in Allure.
 
-Step 10. Log events of tests in Allure .
+Step 10. Log events of tests in Allure.
+
+___
+___
+
+### Lesson 6. The Homework.
+___
+
 
 
 ## What's new

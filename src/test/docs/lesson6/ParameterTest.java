@@ -1,4 +1,4 @@
-package ru.zenicko.lesson6;
+package docs.lesson6;
 
 import io.qameta.allure.Allure;
 import org.junit.jupiter.api.DisplayName;
